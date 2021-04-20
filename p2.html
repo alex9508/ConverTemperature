@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de temperaturas</title>
+		<link rel="stylesheet" href="./p2.css" type="text/css" charset="utf-8">
+</head>
+<body>
+
+		<div class="_Header">
+
+				<h1> Convertidor de temperaturas </h1> 
+
+		</div>
+	 
+		<div class="_Contenedro">
+					
+				<label>Tipo de conversion:</label>
+				<select id="opcionMenu">
+						<option value="1">Fahrenheit a Celsius</option>
+						<option value="2">Fahrenheit a Kelvin</option>
+						<option value="3">Kelvin a Fahrenheit</option>
+						<option value="4">Kelvin a Celsius</option>
+						<option value="5">Celsius a Kelvin</option>
+						<option value="6">Celsius a Fahrenheit</option>
+				</select>
+					
+				
+				<label>Grados a convertir:</label> 
+				<input type="number" min="1" id="primerDato"/>
+				
+
+				<input type="submit" onclick="pasarDatos()" value="Convertir" name="Convertir" id="b_Convertir"/>
+
+		</div>
+
+		<div class="_Resultado">
+				<h2 style="display: inline-block;" >El Resultado es : </h2>
+				<p style="display: inline-block;" id="_Resultado"></p>
+		</div>
+
+		<div class="_Icon">
+				<img class="_I-img" src="./frio.svg" alt="Temperaturas"id="_IconTemp">	
+		</div>
+
+</body>
+<script src="./p2.js" ></script>
+</html>
+
