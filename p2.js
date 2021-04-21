@@ -1,11 +1,11 @@
-
 const CONVERSIONES = (a , pregunta ) => {	
 let imprimirResultado = document.getElementById('_Resultado')
+let iconoMostrar = document.getElementById('_IconTemp')
+let z
+let formatoF
 
 		if( !Number.isNaN(pregunta) && !Number.isNaN(a) && pregunta > 0 && pregunta < 7 )
 		{
-				let z
-				let formatoF
 				
 				switch (pregunta)
 				{
@@ -39,7 +39,6 @@ let imprimirResultado = document.getElementById('_Resultado')
 								formatoF = 'Fahrenheit'
 				}
 
-				let iconoMostrar = document.getElementById('_IconTemp')
 				iconoMostrar.style.visibility = 'visible'		
 
 				if( (formatoF === 'Celsius' && z > 20) || (formatoF === 'Kelvin' && z > 293) || (formatoF === 'Fahrenheit' && z > 69) )
@@ -50,16 +49,17 @@ let imprimirResultado = document.getElementById('_Resultado')
 
 				imprimirResultado.innerHTML = ` ${ z }° ${ formatoF } `
 		}else
+		{
+				iconoMostrar.style.visibility = 'hidden'		
 				imprimirResultado.innerHTML = ` Dato no valido !!! `
+		}
 
 }
 
 function pasarDatos(){
 		const _OpcionDeConversion = parseInt(document.getElementById('opcionMenu').value)
 		const _NumPrimDeConversion = parseInt(document.getElementById('primerDato').value )
-
 		
-
 		CONVERSIONES(_NumPrimDeConversion,_OpcionDeConversion)
 }
 
